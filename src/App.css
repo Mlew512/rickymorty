@@ -1,0 +1,64 @@
+body, html,nav{
+    background-image: url("./src/assets/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* height:100%; */
+}
+main {
+   
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+    /* background-color: rgba(255, 255, 255, 0.055); */
+  
+
+} 
+
+#NavBar {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    position: sticky;
+    top:0;
+    z-index: 100;
+
+}
+
+.icons{
+    height: 9rem;
+    width: auto;
+}
+.portal{
+    height:30rem;
+    animation: rotate 20s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @font-face {
+    font-family: 'RickMortyFont';
+    src: url('./assets/WubbaLubbaDubDub.ttf') format('truetype');
+    src: url('./assets/WubbaLubbaDubDub.otf') format('opentype');
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+body, nav, div{
+    font-family: 'RickMortyFont';
+}
+.NavBar .navbar-nav .nav-link {
+    color: white;
+  }
+  
+.NavBar .navbar-nav .nav-link:hover {
+    color: green; 
+  }
