@@ -7,7 +7,7 @@ function SeasonalCarousel({ episodes}) {
     <Carousel>
         {episodes.map((episode, idx) => (
             <Carousel.Item key={idx}>
-                <img className="d-block w-100"
+                <img className="d-block w-80 m-10"
                 src={episode.backgroundImage}
                 alt={episode.title}
                 />
