@@ -1,6 +1,6 @@
 //api pull for each character'
 import Cards from '../components/Card'
-import axios from 'axios'axios
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 
