@@ -4,6 +4,8 @@ import App from './App';
 import Persons from './pages/Characters';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/About';
+import ACharacter from './pages/ACharacter';
+import FavoritesPage from './pages/Favorites';
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
                 path:"/characters",
                 element:<Persons/>
             },
+            {
+                path:"character/:id/",
+                element:<ACharacter />
+            },
+            {
+                path:'favorites/',
+                element:<FavoritesPage />
+            }
         
         ],
         errorElement: <NotFoundPage />

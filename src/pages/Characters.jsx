@@ -2,6 +2,8 @@
 import Cards from '../components/Card'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import portal from '../assets/portal.svg'
+import {useOutletContext} from 'react-router-dom'
 
 
 
@@ -9,7 +11,7 @@ import { useState, useEffect } from 'react'
 const Persons = () =>{
     const [characters, setCharacters] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const { setFavorites,favorites } = useOutletContext();
    useEffect(() => {
     const getCharacters = async () => {
         try {
@@ -35,11 +37,14 @@ const Persons = () =>{
     return (
         <div>
         {isLoading ? (
-            <p>Loading...</p>
+            <>
+            <img className="portal h-10" src={portal}/>
+            <p className="text-white">Loading...</p>
+            </>
         ) : (
       
         <>
-        <h1>
+        <h1 className="text-white">
             Characters
         </h1>
         <div className="row">
@@ -47,10 +52,13 @@ const Persons = () =>{
         <div key={idx} className="col-md-4 mb-4">
         <Cards
         key={idx}
+        id={character.id}
         name={character.name}
         image={character.image}
         species={character.species}
         origin={character.origin.name}
+        setFavorites={setFavorites}
+        favorites={favorites}
         />
         </div>
         ))}

@@ -3,36 +3,50 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import mort from "../assets/morty-icon.svg";
 import ricky from "../assets/rick-icon.svg";
-import homie from "../assets/portal.svg"
+import homie from "../assets/portal.svg";
+import {Link} from "react-router-dom"
+import butter from "../assets/Butter_Robot.svg";
 
-function NavBar() {
+const NavBar =({favorites}) => {
   return (
     <Navbar id="NavBar" expand="lg" className="bg-body-tertiary NavBar">
       <Container>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">
+          <Nav className="pl-4 pr-4">
+            <div className="boxitup">
+            <Link to="/">
             <img
                 src={homie}
                 alt="home"
-                width="60"
-                height="50"
-              />Home</Nav.Link>
-            <Nav.Link href="/about">
+                className='icons'
+              />Home</Link>
+              </div>
+            <div className="boxitup">
+            <Link to="/about">
             <img
                 src={mort}
                 alt="about"
-                width="50"
-                height="16"
+                className="icons"
               />
-              About</Nav.Link>
-            <Nav.Link href="/characters">
+              About</Link>
+
+              </div>
+              <div className="boxitup">
+            <Link to="/characters">
             <img
                 src={ricky}
                 alt="about"
-                width="50"
-                height="16"
-              />Characters</Nav.Link>
+                className="icons"
+              />Characters</Link>
+              </div>
+            <div className="boxitup">
+            <Link to="favorites/">
+            <img
+              src={butter}
+              alt="about"
+              className="icons"
+            />Fav {favorites.length}</Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
