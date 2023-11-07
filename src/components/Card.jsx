@@ -10,6 +10,7 @@ function Cards({name, image, species, origin}) {
             <Card.Title>{name}</Card.Title>
             <Card.Text>
                 Species: {species}
+                <br/>
                 origin: {origin}
             </Card.Text>
             <Button variant="primary">Get Shwifty</Button>

@@ -50,7 +50,7 @@ const Persons = () =>{
         name={character.name}
         image={character.image}
         species={character.species}
-        oritin={character.origin.name}
+        origin={character.origin.name}
         />
         </div>
         ))}
