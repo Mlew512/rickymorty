@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import {useState, useEffect} from 'react';
 
-function Cards({ name, id, image, species, origin, setFavorites, favorites }) {
+function Cards({ name, id, image, species, status, gender, location, origin, setFavorites, favorites }) {
   
     const navigate = useNavigate();
     const [isFavorite, setIsFavorite] = useState(false);
@@ -24,6 +24,8 @@ function Cards({ name, id, image, species, origin, setFavorites, favorites }) {
           Species: {species}
           <br />
           origin: {origin}
+          <br />
+          Status: {status}
         </Card.Text>
         <Button variant="primary" onClick={() => navigate(`/character/${id}/`)}>
           Get Shwifty

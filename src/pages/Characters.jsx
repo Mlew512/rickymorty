@@ -56,6 +56,7 @@ const Persons = () =>{
         name={character.name}
         image={character.image}
         species={character.species}
+        status={character.status}
         origin={character.origin.name}
         setFavorites={setFavorites}
         favorites={favorites}

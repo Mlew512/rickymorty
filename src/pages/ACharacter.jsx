@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useOutletContext,useParams } from 'react-router-dom';
-import {Card, Button} from 'react-bootstrap'
 import Cards from '../components/Card'
 
 const ACharacter = () => {
@@ -15,6 +14,7 @@ const ACharacter = () => {
         console.log(response.data.origin.name);
 
     }
+
     useEffect(()=>{
         getCharacter()
     },[id])
@@ -22,10 +22,11 @@ const ACharacter = () => {
     return(
         <>
         <Cards
-        id={id}
+        id={character.id}
         name={character.name}
         image={character.image}
         species={character.species}
+        status={character.status}
         origin={character.origin ? character.origin.name : 'Unknown'}//it wasnt loading right away so it threw an error bc it was undefined
         setFavorites={setFavorites}
         favorites={favorites}
