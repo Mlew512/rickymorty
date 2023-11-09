@@ -12,7 +12,7 @@ function Cards({ name, id, image, species, status, gender, location, origin, set
     useEffect(() =>{
         const isFavorite = favorites.some((favorite) => favorite.id === id);
         setIsFavorite(isFavorite);
-        console.log(isFavorite)
+        // console.log(isFavorite)
     }, [favorites, id]);
 
   return (

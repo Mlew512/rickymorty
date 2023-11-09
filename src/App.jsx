@@ -13,7 +13,6 @@ function App() {
   useEffect(()=>{
     console.log(favorites)
   }, [favorites])
-
   return (
     <>
       <NavBar favorites={favorites}/>

@@ -6,6 +6,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/About';
 import ACharacter from './pages/ACharacter';
 import FavoritesPage from './pages/Favorites';
+import Search from './pages/Search';
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path:'favorites/',
                 element:<FavoritesPage />
+            },
+            {
+                path:'search/:searchValue/',
+                element:<Search />
             }
         
         ],

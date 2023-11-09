@@ -1,9 +1,12 @@
-body, html,nav{
+body, html,nav, #root{
+    background-color: rgb(2, 115, 115);
     background-image: url("./src/assets/background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
+    font-family: 'RickMortyFont';
+    color:white;
     /* height:100%; */
 }
 main {
@@ -61,10 +64,20 @@ body, nav, div{
 .NavBar .navbar-nav .nav-link:hover {
     color: green; 
   }
+  .nav-link{
+    text-align: center;
+  }
 .boxitup {
   padding-right: 1rem;
   padding-left:1rem;
+  color:white;
 }
 .hidden {
   display: none;
+}
+a {
+  color:white;
+}
+.get-big{
+  font-size:10em;
 }
